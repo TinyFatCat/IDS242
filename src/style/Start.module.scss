@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+  text-align: center;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    color: coral;
+    animation: fadeIn 0.5s ease-in forwards, slideIn_down 0.5s ease-out forwards;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 14rem;
+  margin: 1.5rem;
+  color: coral;
+  text-align: center;
+  border: 0.2rem solid;
+  border-color: coral;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: fadeIn 1s ease-in forwards, slideIn_down 1s ease-out forwards;
+}
+
+.btn {
+  justify-content: center;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 0.75rem;
+  animation: fadeIn 1s ease-in forwards, slideIn_up 1s ease-out forwards;
+}
+
+.btn:hover {
+  background-color: coral;
+  transition: background-color 200ms ease-in-out;
+}

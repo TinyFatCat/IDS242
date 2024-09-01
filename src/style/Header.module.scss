@@ -1,0 +1,18 @@
+.header {
+  padding-block: 0.5rem;
+  color: white;
+  background-color: black;
+
+  &__text__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+    p {
+      padding-inline: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      background-color: black;
+    }
+  }
+}
