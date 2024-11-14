@@ -5,6 +5,25 @@ import { Link } from 'react-router-dom';
 const Mbti = () => {
   const [selectedMainCard, setSelectedMainCard] = useState(null);
   const [selectedSmallCard, setSelectedSmallCard] = useState(null);
+  const [setValue, setArray] = useState(null);
+  const mbtiList = [
+    'INFP',
+    'INFJ',
+    'INTP',
+    'INTJ',
+    'ISFP',
+    'ISFJ',
+    'ISTP',
+    'ISTJ',
+    'ENFP',
+    'ENFJ',
+    'ENTP',
+    'ENTJ',
+    'ESFP',
+    'ESFJ',
+    'ESTP',
+    'ESTJ',
+  ];
 
   //메인 카드 클릭용
   const handleMainCardClick = (card) => {
@@ -17,26 +36,36 @@ const Mbti = () => {
     setSelectedSmallCard(selectedSmallCard === card ? null : card);
   };
 
-  //다음 버튼 클릭용
-  const handleAcceptClick = () => {
-    if (selectedSmallCard) {
-      localStorage.setItem('selectedCard', selectedSmallCard);
+  //다음으로 넘어갈 때 데이터 저장
+  const saveAndNext = () => {
+    //데이터 저장('데이터 이름', '데이터')
+    localStorage.setItem('mbti__selected', selectedSmallCard);
+  };
+
+  //값 저장용
+  const findIndex = () => {
+    const index = mbtiList.findIndex((item) => item === selectedSmallCard);
+    if (index !== -1) {
+      setArray(index);
+      localStorage.setItem('mbti__value', index);
     }
   };
 
   //스몰 카드
   const smallCards =
     selectedMainCard === 'A'
-      ? ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+      ? ['INFP', 'INFJ', 'INTP', 'INTJ', 'ISFP', 'ISFJ', 'ISTP', 'ISTJ']
       : selectedMainCard === 'B'
-      ? ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8']
+      ? ['ENFP', 'ENFJ', 'ENTP', 'ENTJ', 'ESFP', 'ESFJ', 'ESTP', 'ESTJ']
       : [];
 
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <h1>당신의 MBTI를 선택하세요</h1>
-        <h3>이 단계에서 무기의 종류가 결정됩니다</h3>
+        <div className={styles.wrapper}>
+          <h1>당신의 MBTI를 선택하세요</h1>
+          <h3>이 단계에서 무기의 종류가 결정됩니다</h3>
+        </div>
         {/* 메인 I, E 카드  */}
         <div className={styles.mbti__wrapper}>
           <div
@@ -45,7 +74,7 @@ const Mbti = () => {
             }`}
             onClick={() => handleMainCardClick('A')}
           >
-            A
+            I
           </div>
           <div
             className={`${styles.mbti__cards} ${
@@ -53,7 +82,7 @@ const Mbti = () => {
             }`}
             onClick={() => handleMainCardClick('B')}
           >
-            B
+            E
           </div>
         </div>
         {/* 내부 스몰 카드들 */}
@@ -70,18 +99,23 @@ const Mbti = () => {
             </div>
           ))}
         </div>
+        <div className={styles.wrapper}>
+          {selectedSmallCard ? (
+            <Link
+              to="/Birth"
+              className={`${styles.btn} ${styles.active}`}
+              onClick={() => {
+                saveAndNext();
+                findIndex();
+              }}
+            >
+              결정하기
+            </Link>
+          ) : (
+            <div className={styles.btn}>선택을 기다리는 중</div>
+          )}
+        </div>
         {/* 다음 넘어가기 버튼 */}
-        {selectedSmallCard ? (
-          <Link
-            to="/CheckPage"
-            className={`${styles.btn} ${styles.active}`}
-            onClick={handleAcceptClick}
-          >
-            결정하기
-          </Link>
-        ) : (
-          <div className={styles.btn}>선택을 기다리는 중</div>
-        )}
       </div>
     </div>
   );

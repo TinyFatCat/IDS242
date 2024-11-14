@@ -5,8 +5,18 @@
   font-family: 'Noto Sans KR', sans-serif;
   font-style: normal;
   font-optical-sizing: auto;
-  background-color: rgb(14, 14, 14);
   text-decoration: none;
+  // overflow: hidden;
+  word-wrap: break-word;
+  word-break: keep-all;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 h3 {
