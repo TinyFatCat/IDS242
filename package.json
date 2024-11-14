@@ -25,7 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://tinyfatcat.github.io/my-app/",
+  "homepage": "https://tinyfatcat.github.io/IDS242/my-app",
   "eslintConfig": {
     "extends": [
       "react-app",
