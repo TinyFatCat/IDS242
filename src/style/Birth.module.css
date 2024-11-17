@@ -1,0 +1,119 @@
+@keyframes slideIn_up {
+  from {
+    transform: translate(0, -2rem);
+  }
+}
+@keyframes slideIn_down {
+  from {
+    transform: translate(0, 2rem);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: opacity(1);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container h1 {
+  margin-bottom: 1rem;
+  color: coral;
+  animation: fadeIn 0.5s ease-in forwards, slideIn_up 0.5s ease-out forwards;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-block: 2rem 0;
+  align-items: center;
+}
+
+.wrapper__text {
+  display: block;
+  margin-block: 2rem;
+}
+
+.btn {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  background: url("/img/ui/btn_start.png") no-repeat;
+  background-size: cover;
+  width: 28rem;
+  aspect-ratio: 4/1;
+}
+.btn:hover {
+  color: coral;
+  background: url("/img/ui/btn_start_hover.png") no-repeat;
+  background-size: cover;
+  transition-duration: 0.75s;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card__text {
+  opacity: 0.6;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: coral;
+  position: absolute;
+  right: 40rem;
+}
+
+.num__count {
+  --btnWidth: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--btnWidth);
+  height: calc((var(--btnWidth)) * 1.5);
+  font-size: 5rem;
+  font-weight: 500;
+  color: coral;
+  text-align: center;
+  background: none;
+  border: 0.2rem solid;
+  border-color: coral;
+  border-radius: 0.75rem;
+  animation: fadeIn 0.75s ease-in forwards;
+}
+
+.btn__cal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: coral;
+  text-align: center;
+  cursor: pointer;
+  animation: fadeIn 0.75s ease-in forwards;
+}

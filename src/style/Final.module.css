@@ -1,0 +1,233 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: opacity(1);
+  }
+}
+:root {
+  --max-width: 1300px;
+  background-color: rgb(14, 14, 14);
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 0.75s ease-in forwards;
+}
+.container .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: coral;
+}
+.container .wrapper__btn {
+  display: flex;
+}
+.container .btn {
+  display: flex;
+  margin-inline: 0.75rem;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: url("/img/ui/btn_start.png") no-repeat;
+  background-size: cover;
+  width: 25rem;
+  aspect-ratio: 4/1;
+}
+.container .btn h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.container .btn p {
+  padding-top: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b8b5b2;
+}
+.container .btn:hover {
+  color: coral;
+  background: url("/img/ui/btn_start_hover.png") no-repeat;
+  background-size: cover;
+  transition-duration: 0.75s;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: var(--max-width);
+  aspect-ratio: 7/4;
+}
+.card img {
+  width: 100%;
+}
+
+.card__wp__bgs {
+  position: absolute;
+  z-index: 0;
+}
+
+.card__border {
+  position: absolute;
+  z-index: 100;
+  width: var(--max-width);
+  height: 100%;
+  border: solid;
+  border-width: 250px;
+  border-image: url("../img/card_wp/card_wp_border.png") 34% round;
+}
+
+.card__wp__inner__contents {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__wp__weapon__box {
+  width: calc(var(--max-width) * 0.413);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__wp__weapon__box__wp {
+  position: relative;
+  z-index: 3;
+}
+.card__wp__weapon__box__wp img {
+  width: 100%;
+}
+
+.card__wp__weapon__box__effect {
+  position: absolute;
+  z-index: 2;
+}
+.card__wp__weapon__box__effect img {
+  width: 100%;
+}
+
+.card__wp__weapon__txt {
+  width: calc(var(--max-width) * 0.587);
+  display: block;
+  flex: 1;
+  align-items: flex-start;
+}
+.card__wp__weapon__txt__label {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22.5%;
+}
+.card__wp__weapon__txt__label h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: coral;
+  margin-block: 0.6rem 0;
+}
+.card__wp__weapon__txt__desc {
+  height: 26%;
+}
+.card__wp__weapon__txt__desc h2 {
+  padding-top: 2.5rem;
+  font-size: 1.3rem;
+  color: rgb(245, 175, 83);
+}
+.card__wp__weapon__txt__desc h3 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.65rem;
+  color: white;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.card__wp__weapon__spec__wrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  overflow: visible;
+}
+.card__wp__weapon__spec__circle {
+  z-index: 4;
+  position: absolute;
+  top: -70px;
+  left: -50px;
+  transform: scale(0.5);
+}
+.card__wp__weapon__spec__icon {
+  position: absolute;
+  z-index: 3;
+  top: -70px;
+  left: -50px;
+  transform: scale(0.5);
+}
+.card__wp__weapon__spec__box {
+  position: relative;
+  padding-inline: 1rem;
+  overflow: visible;
+}
+.card__wp__weapon__spec__box h4 {
+  font-size: 1.2rem;
+  position: absolute;
+  padding-block: 1.4rem 0;
+  padding-inline: 1.2rem 0rem;
+  width: 80%;
+  font-weight: 500;
+  color: orange;
+  text-align: left;
+}
+.card__wp__weapon__spec__box p {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-block: 5.4rem 0;
+  padding-inline: 1.2rem;
+  width: 90%;
+  text-align: left;
+  color: white;
+  opacity: 0.7;
+  line-height: 1.5rem;
+}
+.card__wp__weapon__spec__box img {
+  width: 210px;
+}
+
+.card__edge__slider {
+  position: absolute;
+  z-index: 99;
+}
+.card__edge__slider img {
+  width: 100%;
+}
+
+.card__wp__edges__right {
+  position: absolute;
+  z-index: 3;
+}
+.card__wp__edges__right img {
+  width: 100%;
+}
+
+.vid__4 {
+  position: absolute;
+  z-index: -1;
+}

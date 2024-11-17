@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-block: 1rem 0;
+  padding-inline: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  z-index: 99;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.header__icon {
+  margin-left: 1rem;
+}
+.header__icon__dic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/img/ui/header_dictionary.png") no-repeat;
+  background-size: contain;
+  width: 6vh;
+  aspect-ratio: 5/4;
+  cursor: pointer;
+}
+.header__icon__home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/img/ui/header_home.png") no-repeat;
+  background-size: contain;
+  width: 6vh;
+  aspect-ratio: 5/4;
+  cursor: pointer;
+}
+.header h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  opacity: 0.6;
+}

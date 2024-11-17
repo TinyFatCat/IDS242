@@ -1,0 +1,135 @@
+@keyframes slideIn_up {
+  from {
+    transform: translate(0, -2rem);
+  }
+}
+@keyframes slideIn_down {
+  from {
+    transform: translate(0, 2rem);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: opacity(1);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .wrapper {
+  display: block;
+  text-align: center;
+  margin-block: 2.5rem;
+}
+.container h1 {
+  margin-bottom: 1rem;
+  color: coral;
+  animation: fadeIn 0.5s ease-in forwards, slideIn_up 0.5s ease-out forwards;
+}
+.container h3 {
+  animation: fadeIn 0.75s ease-in forwards, slideIn_up 1s ease-out forwards;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  aspect-ratio: 2.01/2.41;
+  margin-inline: 1.2rem;
+  margin-block: 2rem 1.5rem;
+  color: #ececec;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  overflow: visible;
+  animation: fadeIn 1s ease-in forwards, slideIn_down 1.25s ease-out forwards;
+}
+.card img {
+  overflow: hidden;
+}
+.card__label {
+  color: coral;
+  position: absolute;
+  z-index: 99;
+  top: -30px;
+  background: url("/img/ui/card_material_label.png") no-repeat;
+  width: 13.6rem;
+  aspect-ratio: 1.35/0.49;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__edge {
+  position: absolute;
+  z-index: 3;
+  width: 320px;
+  aspect-ratio: 2.01/2.41;
+  background: url("/img/ui/card_material_edge.png") no-repeat;
+  background-size: cover;
+}
+.card__bg {
+  width: 320px;
+  aspect-ratio: 2.01/2.41;
+  background: url("/img/ui/card_material_bg.png") no-repeat;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+.card__bg img {
+  transform: scale(99%);
+}
+
+.card__text {
+  transition: opacity 0.5s ease;
+  font-weight: 200;
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: fadeIn 1.25s ease-in forwards;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+
+.card__wrapper {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+.wrapper__btn {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.btn {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  background: url("/img/ui/btn_start.png") no-repeat;
+  background-size: cover;
+  width: 28rem;
+  aspect-ratio: 4/1;
+}
+.btn:hover {
+  color: coral;
+  background: url("/img/ui/btn_start_hover.png") no-repeat;
+  background-size: cover;
+  transition-duration: 0.5s;
+}
