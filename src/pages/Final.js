@@ -22,15 +22,15 @@ import domtoimage from 'dom-to-image';
 const Final = () => {
   //카드에 고정되는 스틸 이미지 파일
   const card__wp__edge__slider__url =
-    process.env.PUBLIC_URL + '/img/card_wp/card_wp_edge_slider.png';
+    process.env.PUBLIC_URL + '/img/card_wp/card_wp_edge_slider.webp';
   const card__wp__edges__right__url =
-    process.env.PUBLIC_URL + '/img/card_wp/card_wp_edges_right.png';
+    process.env.PUBLIC_URL + '/img/card_wp/card_wp_edges_right.webp';
   const card__spec__circle__url =
-    process.env.PUBLIC_URL + '/img/card_wp/card_spec_circle.png';
+    process.env.PUBLIC_URL + '/img/card_wp/card_spec_circle.webp';
   const card__spec__desc__url =
-    process.env.PUBLIC_URL + '/img/card_wp/card_spec_desc.png';
+    process.env.PUBLIC_URL + '/img/card_wp/card_spec_desc.webp';
   const card__wp__bgs__url =
-    process.env.PUBLIC_URL + '/img/card_wp/card_wp_bgs.jpg';
+    process.env.PUBLIC_URL + '/img/card_wp/card_wp_bgs.webp';
 
   //무기 이름 상태 관리(state)
   const mbtiNum = localStorage.getItem('mbti__value');
@@ -46,9 +46,10 @@ const Final = () => {
   const wp__label__third = wp_label_appear[zodiacNum];
   const wp__label__fourth = wp_label_name[mbtiNum];
   //
-  const wp__url = `/img/weapons/${wp__img__mbti}/${birthColor}__${zodiacNum}.png`;
-  const eff__url = `/img/effects/effect__${constellNum}.jpg`;
+  const wp__url = `/img/weapons/${wp__img__mbti}/${birthColor}__${zodiacNum}.webp`;
+  const eff__url = `/img/effects/effect__${constellNum}.webp`;
   //
+  const card__wp__logo = `/img/card_wp/logo_find_your_weapon.webp`;
   const wp__img = process.env.PUBLIC_URL + wp__url;
   const effect__img = process.env.PUBLIC_URL + eff__url;
   const wp__main__txt = wp_main_txt_list[zodiacNum];
@@ -59,7 +60,7 @@ const Final = () => {
   const captureDiv = () => {
     const element = document.querySelector(`.${styles.card}`);
     domtoimage
-      .toPng(element)
+      .towebp(element)
       .then((dataUrl) => {
         const link = document.createElement('a');
         link.href = dataUrl;
@@ -74,8 +75,8 @@ const Final = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.wrapper}>
-          <h1>당신의 무기가 제작되었습니다</h1>
+        <div className={styles.wrapper__logo}>
+          <img src={card__wp__logo} alt="상단 로고" />
         </div>
         <div className={styles.card}>
           {/* <div className={styles.card__border}></div> */}
@@ -202,6 +203,11 @@ const Final = () => {
               <p>처음으로 돌아갑니다</p>
             </div>
           </Link>
+        </div>
+        <div className={styles.vid__3}>
+          <video muted autoPlay>
+            <source src="/vid/fire_overlay.webm" type="video/webm" />
+          </video>
         </div>
         <div className={styles.vid__4}>
           <video muted autoPlay loop>

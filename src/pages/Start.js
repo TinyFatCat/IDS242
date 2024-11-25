@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 
 const Start = () => {
   const imgUrl1 =
-    process.env.PUBLIC_URL + '/img/ui/card_material_icon/mbti.png';
+    process.env.PUBLIC_URL + '/img/ui/card_material_icon/mbti.webp';
   const imgUrl2 =
-    process.env.PUBLIC_URL + '/img/ui/card_material_icon/birth.png';
+    process.env.PUBLIC_URL + '/img/ui/card_material_icon/birth.webp';
   const imgUrl3 =
-    process.env.PUBLIC_URL + '/img/ui/card_material_icon/zodiac.png';
+    process.env.PUBLIC_URL + '/img/ui/card_material_icon/zodiac.webp';
   const imgUrl4 =
-    process.env.PUBLIC_URL + '/img/ui/card_material_icon/constell.png';
+    process.env.PUBLIC_URL + '/img/ui/card_material_icon/constell.webp';
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper__top}>
           <h1>나만의 무기를 만들어보세요</h1>
           <h3>아래 네 가지 재료를 모아 무기를 만들 수 있어요</h3>
         </div>

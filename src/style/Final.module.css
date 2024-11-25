@@ -17,13 +17,20 @@ h1 {
   font-size: 2rem;
 }
 
+.wrapper__logo {
+  padding-top: 4rem;
+}
+.wrapper__logo img {
+  width: 19%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: fadeIn 0.75s ease-in forwards;
+  animation: fadeIn 1.5s ease-in forwards;
 }
 .container .wrapper {
   display: flex;
@@ -32,6 +39,7 @@ h1 {
   color: coral;
 }
 .container .wrapper__btn {
+  margin-top: 1rem;
   display: flex;
 }
 .container .btn {
@@ -44,7 +52,7 @@ h1 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: url("/img/ui/btn_start.png") no-repeat;
+  background: url("/img/ui/btn_start.webp") no-repeat;
   background-size: cover;
   width: 25rem;
   aspect-ratio: 4/1;
@@ -61,7 +69,7 @@ h1 {
 }
 .container .btn:hover {
   color: coral;
-  background: url("/img/ui/btn_start_hover.png") no-repeat;
+  background: url("/img/ui/btn_start_hover.webp") no-repeat;
   background-size: cover;
   transition-duration: 0.75s;
 }
@@ -79,16 +87,6 @@ h1 {
 .card__wp__bgs {
   position: absolute;
   z-index: 0;
-}
-
-.card__border {
-  position: absolute;
-  z-index: 100;
-  width: var(--max-width);
-  height: 100%;
-  border: solid;
-  border-width: 250px;
-  border-image: url("../img/card_wp/card_wp_border.png") 34% round;
 }
 
 .card__wp__inner__contents {
@@ -227,7 +225,11 @@ h1 {
   width: 100%;
 }
 
-.vid__4 {
+.vid__3 {
   position: absolute;
   z-index: -1;
+}
+.vid__4 {
+  position: absolute;
+  z-index: -2;
 }

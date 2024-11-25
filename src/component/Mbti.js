@@ -62,7 +62,7 @@ const Mbti = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper__top}>
           <h1>당신의 MBTI를 선택하세요</h1>
           <h3>이 단계에서 무기의 종류가 결정됩니다</h3>
         </div>

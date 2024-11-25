@@ -59,9 +59,10 @@ const Constell = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <h1>당신의 별자리를 선택하세요</h1>
-        <h3>이 단계에서 무기의 이펙트가 결정됩니다</h3>
-
+        <div className={styles.wrapper__top}>
+          <h1>당신의 별자리를 선택하세요</h1>
+          <h3>이 단계에서 무기의 이펙트가 결정됩니다</h3>
+        </div>
         {/* 내부 스몰 카드들 */}
         <div className={styles.wrapper}>
           {listName.map((card, index) => (

@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: row-reverse;
   padding-block: 1rem 0;
-  padding-inline: 3rem;
+  padding-inline: 2.2rem;
   margin-bottom: 1rem;
   color: white;
   z-index: 99;
+  position: fixed;
+  top: 0%;
+  right: 0%;
 }
 .header__wrapper {
   display: flex;
@@ -13,15 +16,15 @@
   text-align: center;
 }
 .header__icon {
-  margin-left: 1rem;
+  padding-left: 1.5rem;
 }
 .header__icon__dic {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/ui/header_dictionary.png") no-repeat;
+  background: url("/img/ui/header_dictionary.webp") no-repeat;
   background-size: contain;
-  width: 6vh;
+  width: 4rem;
   aspect-ratio: 5/4;
   cursor: pointer;
 }
@@ -29,9 +32,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/ui/header_home.png") no-repeat;
+  background: url("/img/ui/header_home.webp") no-repeat;
   background-size: contain;
-  width: 6vh;
+  width: 4rem;
   aspect-ratio: 5/4;
   cursor: pointer;
 }

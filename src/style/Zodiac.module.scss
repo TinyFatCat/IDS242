@@ -41,7 +41,7 @@ h3 {
 
 .wrapper__text {
   display: block;
-  margin-block: 2rem;
+  margin-block: 12rem 2rem;
 }
 
 .wrapper {
@@ -99,7 +99,7 @@ h3 {
   text-align: center;
   align-items: center;
   cursor: pointer;
-  background: url('/img/ui/btn_start.png') no-repeat;
+  background: url('/img/ui/btn_start.webp') no-repeat;
   background-size: cover;
   width: 28rem;
   opacity: 0.5;
@@ -111,7 +111,7 @@ h3 {
   cursor: pointer;
   &:hover {
     color: coral;
-    background: url('/img/ui/btn_start_hover.png') no-repeat;
+    background: url('/img/ui/btn_start_hover.webp') no-repeat;
     background-size: cover;
     transition-duration: 0.5s;
   }

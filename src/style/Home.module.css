@@ -55,14 +55,14 @@ h3 {
   text-align: center;
   align-items: center;
   cursor: pointer;
-  background: url("/img/ui/btn_start.png") no-repeat;
+  background: url("/img/ui/btn_start.webp") no-repeat;
   background-size: cover;
   width: 28rem;
   aspect-ratio: 4/1;
 }
 .btn:hover {
   color: coral;
-  background: url("/img/ui/btn_start_hover.png") no-repeat;
+  background: url("/img/ui/btn_start_hover.webp") no-repeat;
   background-size: cover;
   transition-duration: 0.5s;
 }

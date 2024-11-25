@@ -79,7 +79,7 @@ const Birth = () => {
             -
           </div>
         </div>
-        {/* <div className={styles.card__text}>년생</div> */}
+        <div className={styles.card__text}>년생</div>
       </div>
       {/* <div>
         <p>현재 값: {numCombined}</p>
