@@ -22,8 +22,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/ui/header_dictionary.webp") no-repeat;
-  background-size: contain;
+}
+.header__icon__dic img {
   width: 4rem;
   aspect-ratio: 5/4;
   cursor: pointer;
@@ -32,8 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/img/ui/header_home.webp") no-repeat;
-  background-size: contain;
+}
+.header__icon__home img {
   width: 4rem;
   aspect-ratio: 5/4;
   cursor: pointer;

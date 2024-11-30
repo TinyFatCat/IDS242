@@ -22,21 +22,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('/img/ui/header_dictionary.webp') no-repeat;
-      background-size: contain;
-      width: 4rem;
-      aspect-ratio: 5 / 4;
-      cursor: pointer;
+      img {
+        width: 4rem;
+        aspect-ratio: 5 / 4;
+        cursor: pointer;
+      }
     }
     &__home {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('/img/ui/header_home.webp') no-repeat;
-      background-size: contain;
-      width: 4rem;
-      aspect-ratio: 5 / 4;
-      cursor: pointer;
+      img {
+        width: 4rem;
+        aspect-ratio: 5 / 4;
+        cursor: pointer;
+      }
     }
   }
 
