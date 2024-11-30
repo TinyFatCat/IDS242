@@ -13,6 +13,8 @@ import Mbti from './component/Mbti';
 import Birth from './component/Birth';
 import Zodiac from './component/Zodiac';
 import Constell from './component/Constell';
+import Popup from './component/Popup';
+// import AutoRefresh from './component/AutoRefresh';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path="/CheckPage" element={<CheckPage />} />
         <Route path="/Making" element={<Making />} />
         <Route path="/Final" element={<Final />} />
+        <Route path="/Popup" element={<Popup />} />
       </Routes>
     </div>
   );

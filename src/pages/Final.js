@@ -18,6 +18,7 @@ import {
 import styles from '../style/Final.module.css';
 import { Link } from 'react-router-dom';
 import domtoimage from 'dom-to-image';
+import Popup from '../component/Popup';
 
 const Final = () => {
   //카드에 고정되는 스틸 이미지 파일
@@ -25,8 +26,8 @@ const Final = () => {
     process.env.PUBLIC_URL + '/img/card_wp/card_wp_edge_slider.webp';
   const card__wp__edges__right__url =
     process.env.PUBLIC_URL + '/img/card_wp/card_wp_edges_right.webp';
-  const card__spec__circle__url =
-    process.env.PUBLIC_URL + '/img/card_wp/card_spec_circle.webp';
+  // const card__spec__circle__url =
+  //   process.env.PUBLIC_URL + '/img/card_wp/card_spec_circle.webp';
   const card__spec__desc__url =
     process.env.PUBLIC_URL + '/img/card_wp/card_spec_desc.webp';
   const card__wp__bgs__url =
@@ -56,19 +57,34 @@ const Final = () => {
   const wp__sub__txt1 = wp_sub_txt_list_a[constellNum];
   const wp__sub__txt2 =
     wp_sub_txt_list_b[zodiacNum] + wp_sub_txt_list_c[mbtiNum];
-  //이미지 저장하기
-  const captureDiv = () => {
-    const element = document.querySelector(`.${styles.card}`);
+
+  //팝업 관리
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+  //무기 카드 이미지 저장
+  const divRef = React.useRef();
+  const handleDownload = () => {
+    const node = divRef.current;
     domtoimage
-      .towebp(element)
-      .then((dataUrl) => {
+      .toPng(node)
+      .then(function (dataUrl) {
+        // 이미지 URL 생성
         const link = document.createElement('a');
         link.href = dataUrl;
-        link.download = 'my_weapon_card.jpg'; // 저장할 이미지 이름
+        link.download = 'weapon__image.jpg'; // 저장될 파일 이름
+
+        // 링크를 클릭하여 다운로드 시작
         link.click();
+
+        console.log('저장되었습니다');
       })
-      .catch((error) => {
-        console.error('Error capturing image:', error);
+      .catch(function (error) {
+        console.error('이미지 생성 실패:', error);
       });
   };
 
@@ -78,7 +94,7 @@ const Final = () => {
         <div className={styles.wrapper__logo}>
           <img src={card__wp__logo} alt="상단 로고" />
         </div>
-        <div className={styles.card}>
+        <div ref={divRef} className={styles.card}>
           {/* <div className={styles.card__border}></div> */}
           <div className={styles.card__edge__slider}>
             <img
@@ -189,13 +205,11 @@ const Final = () => {
           </div>
         </div>
         <div className={styles.wrapper__btn}>
-          <div className={styles.btn} onClick={captureDiv}>
+          {/* Popup 컴포넌트 사용 */}
+          <Popup isOpen={isPopupOpen} onClose={closePopup}></Popup>
+          {/* <div className={styles.btn} onClick={(openPopup, handleDownload)}>
             <h5>저장하기</h5>
-            <p>현재 무기를 이미지로 저장합니다</p>
-          </div>
-          {/* <div className={styles.btn}>
-            <h5>무기 도감</h5>
-            <p>전체 무기 도감을 봅니다</p>
+            <div className={styles.slash}>QR코드로 이미지를 저장합니다</div>
           </div> */}
           <Link to="/">
             <div className={styles.btn}>
